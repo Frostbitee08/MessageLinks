@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84496499227A7542005D6AF9 /* MessageLinks.h in Headers */ = {isa = PBXBuildFile; fileRef = 84496498227A7542005D6AF9 /* MessageLinks.h */; };
+		8449649B227A7542005D6AF9 /* MessageLinks.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449649A227A7542005D6AF9 /* MessageLinks.m */; };
+		844964C0227A77E9005D6AF9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844964BF227A77E9005D6AF9 /* Cocoa.framework */; };
+		844964C4227A7808005D6AF9 /* LinkPresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844964C1227A7807005D6AF9 /* LinkPresentation.framework */; };
+		844964C5227A7808005D6AF9 /* IMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844964C2227A7807005D6AF9 /* IMCore.framework */; };
+		844964C6227A7808005D6AF9 /* SocialUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844964C3227A7808005D6AF9 /* SocialUI.framework */; };
+		844964D5227A7899005D6AF9 /* MLLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 844964C7227A7898005D6AF9 /* MLLink.m */; };
+		844964D6227A7899005D6AF9 /* MLLinksViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 844964C8227A7898005D6AF9 /* MLLinksViewController.h */; };
+		844964D7227A7899005D6AF9 /* MLLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 844964C9227A7898005D6AF9 /* MLLink.h */; };
+		844964D8227A7899005D6AF9 /* MLAttachmentsWrapperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844964CA227A7899005D6AF9 /* MLAttachmentsWrapperViewController.m */; };
+		844964D9227A7899005D6AF9 /* MLLinkImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 844964CB227A7899005D6AF9 /* MLLinkImageView.h */; };
+		844964DA227A7899005D6AF9 /* MLChatDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 844964CC227A7899005D6AF9 /* MLChatDatabaseManager.m */; };
+		844964DB227A7899005D6AF9 /* MLLinkAttachmentCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844964CD227A7899005D6AF9 /* MLLinkAttachmentCellView.m */; };
+		844964DC227A7899005D6AF9 /* NSDate+MLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 844964CE227A7899005D6AF9 /* NSDate+MLExtensions.m */; };
+		844964DD227A7899005D6AF9 /* MLLinksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844964CF227A7899005D6AF9 /* MLLinksViewController.m */; };
+		844964DE227A7899005D6AF9 /* MLChatDatabaseManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 844964D0227A7899005D6AF9 /* MLChatDatabaseManager.h */; };
+		844964DF227A7899005D6AF9 /* MLAttachmentsWrapperViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 844964D1227A7899005D6AF9 /* MLAttachmentsWrapperViewController.h */; };
+		844964E0227A7899005D6AF9 /* NSDate+MLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 844964D2227A7899005D6AF9 /* NSDate+MLExtensions.h */; };
+		844964E1227A7899005D6AF9 /* MLLinkImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844964D3227A7899005D6AF9 /* MLLinkImageView.m */; };
+		844964E2227A7899005D6AF9 /* MLLinkAttachmentCellView.h in Headers */ = {isa = PBXBuildFile; fileRef = 844964D4227A7899005D6AF9 /* MLLinkAttachmentCellView.h */; };
+		B2F64DA47A9D7F0645AADF88 /* libPods-MessageLinks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D245984C88E6638C43B557A /* libPods-MessageLinks.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		12E96A86F9E46504ABF8B5E3 /* Pods-MessageLinks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageLinks.release.xcconfig"; path = "../Pods/Target Support Files/Pods-MessageLinks/Pods-MessageLinks.release.xcconfig"; sourceTree = "<group>"; };
+		3D245984C88E6638C43B557A /* libPods-MessageLinks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MessageLinks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84496495227A7542005D6AF9 /* MessageLinks.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = MessageLinks.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		84496498227A7542005D6AF9 /* MessageLinks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageLinks.h; sourceTree = "<group>"; };
+		8449649A227A7542005D6AF9 /* MessageLinks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageLinks.m; sourceTree = "<group>"; };
+		844964BF227A77E9005D6AF9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		844964C1227A7807005D6AF9 /* LinkPresentation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LinkPresentation.framework; sourceTree = "<group>"; };
+		844964C2227A7807005D6AF9 /* IMCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMCore.framework; sourceTree = "<group>"; };
+		844964C3227A7808005D6AF9 /* SocialUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SocialUI.framework; sourceTree = "<group>"; };
+		844964C7227A7898005D6AF9 /* MLLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLink.m; sourceTree = "<group>"; };
+		844964C8227A7898005D6AF9 /* MLLinksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLinksViewController.h; sourceTree = "<group>"; };
+		844964C9227A7898005D6AF9 /* MLLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLink.h; sourceTree = "<group>"; };
+		844964CA227A7899005D6AF9 /* MLAttachmentsWrapperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLAttachmentsWrapperViewController.m; sourceTree = "<group>"; };
+		844964CB227A7899005D6AF9 /* MLLinkImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLinkImageView.h; sourceTree = "<group>"; };
+		844964CC227A7899005D6AF9 /* MLChatDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLChatDatabaseManager.m; sourceTree = "<group>"; };
+		844964CD227A7899005D6AF9 /* MLLinkAttachmentCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLinkAttachmentCellView.m; sourceTree = "<group>"; };
+		844964CE227A7899005D6AF9 /* NSDate+MLExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MLExtensions.m"; sourceTree = "<group>"; };
+		844964CF227A7899005D6AF9 /* MLLinksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLinksViewController.m; sourceTree = "<group>"; };
+		844964D0227A7899005D6AF9 /* MLChatDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLChatDatabaseManager.h; sourceTree = "<group>"; };
+		844964D1227A7899005D6AF9 /* MLAttachmentsWrapperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAttachmentsWrapperViewController.h; sourceTree = "<group>"; };
+		844964D2227A7899005D6AF9 /* NSDate+MLExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MLExtensions.h"; sourceTree = "<group>"; };
+		844964D3227A7899005D6AF9 /* MLLinkImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLinkImageView.m; sourceTree = "<group>"; };
+		844964D4227A7899005D6AF9 /* MLLinkAttachmentCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLinkAttachmentCellView.h; sourceTree = "<group>"; };
+		844964E6227B6A4C005D6AF9 /* MessageLinks-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MessageLinks-Prefix.pch"; sourceTree = "<group>"; };
+		FD777CDE48D164627189EB6E /* Pods-MessageLinks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageLinks.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-MessageLinks/Pods-MessageLinks.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84496493227A7542005D6AF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844964C0227A77E9005D6AF9 /* Cocoa.framework in Frameworks */,
+				844964C4227A7808005D6AF9 /* LinkPresentation.framework in Frameworks */,
+				844964C5227A7808005D6AF9 /* IMCore.framework in Frameworks */,
+				844964C6227A7808005D6AF9 /* SocialUI.framework in Frameworks */,
+				B2F64DA47A9D7F0645AADF88 /* libPods-MessageLinks.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8449648C227A7542005D6AF9 = {
+			isa = PBXGroup;
+			children = (
+				84496497227A7542005D6AF9 /* MessageLinks */,
+				84496496227A7542005D6AF9 /* Products */,
+				844964BE227A77E9005D6AF9 /* Frameworks */,
+				9F13F2F51A1188566B75AD53 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		84496496227A7542005D6AF9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84496495227A7542005D6AF9 /* MessageLinks.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84496497227A7542005D6AF9 /* MessageLinks */ = {
+			isa = PBXGroup;
+			children = (
+				844964E6227B6A4C005D6AF9 /* MessageLinks-Prefix.pch */,
+				844964D2227A7899005D6AF9 /* NSDate+MLExtensions.h */,
+				844964CE227A7899005D6AF9 /* NSDate+MLExtensions.m */,
+				84496498227A7542005D6AF9 /* MessageLinks.h */,
+				8449649A227A7542005D6AF9 /* MessageLinks.m */,
+				844964D1227A7899005D6AF9 /* MLAttachmentsWrapperViewController.h */,
+				844964CA227A7899005D6AF9 /* MLAttachmentsWrapperViewController.m */,
+				844964D0227A7899005D6AF9 /* MLChatDatabaseManager.h */,
+				844964CC227A7899005D6AF9 /* MLChatDatabaseManager.m */,
+				844964C9227A7898005D6AF9 /* MLLink.h */,
+				844964C7227A7898005D6AF9 /* MLLink.m */,
+				844964D4227A7899005D6AF9 /* MLLinkAttachmentCellView.h */,
+				844964CD227A7899005D6AF9 /* MLLinkAttachmentCellView.m */,
+				844964CB227A7899005D6AF9 /* MLLinkImageView.h */,
+				844964D3227A7899005D6AF9 /* MLLinkImageView.m */,
+				844964C8227A7898005D6AF9 /* MLLinksViewController.h */,
+				844964CF227A7899005D6AF9 /* MLLinksViewController.m */,
+			);
+			path = MessageLinks;
+			sourceTree = "<group>";
+		};
+		844964BE227A77E9005D6AF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				844964C2227A7807005D6AF9 /* IMCore.framework */,
+				844964C1227A7807005D6AF9 /* LinkPresentation.framework */,
+				844964C3227A7808005D6AF9 /* SocialUI.framework */,
+				844964BF227A77E9005D6AF9 /* Cocoa.framework */,
+				3D245984C88E6638C43B557A /* libPods-MessageLinks.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F13F2F51A1188566B75AD53 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD777CDE48D164627189EB6E /* Pods-MessageLinks.debug.xcconfig */,
+				12E96A86F9E46504ABF8B5E3 /* Pods-MessageLinks.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		84496491227A7542005D6AF9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844964DE227A7899005D6AF9 /* MLChatDatabaseManager.h in Headers */,
+				844964D9227A7899005D6AF9 /* MLLinkImageView.h in Headers */,
+				844964E0227A7899005D6AF9 /* NSDate+MLExtensions.h in Headers */,
+				844964E2227A7899005D6AF9 /* MLLinkAttachmentCellView.h in Headers */,
+				844964D6227A7899005D6AF9 /* MLLinksViewController.h in Headers */,
+				844964D7227A7899005D6AF9 /* MLLink.h in Headers */,
+				84496499227A7542005D6AF9 /* MessageLinks.h in Headers */,
+				844964DF227A7899005D6AF9 /* MLAttachmentsWrapperViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		84496494227A7542005D6AF9 /* MessageLinks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8449649E227A7542005D6AF9 /* Build configuration list for PBXNativeTarget "MessageLinks" */;
+			buildPhases = (
+				23EF010A9177F80209C1C5ED /* [CP] Check Pods Manifest.lock */,
+				84496491227A7542005D6AF9 /* Headers */,
+				84496492227A7542005D6AF9 /* Sources */,
+				84496493227A7542005D6AF9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MessageLinks;
+			productName = MessageLinks;
+			productReference = 84496495227A7542005D6AF9 /* MessageLinks.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8449648D227A7542005D6AF9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Rocco Del Priore";
+				TargetAttributes = {
+					84496494227A7542005D6AF9 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 84496490227A7542005D6AF9 /* Build configuration list for PBXProject "MessageLinks" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8449648C227A7542005D6AF9;
+			productRefGroup = 84496496227A7542005D6AF9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84496494227A7542005D6AF9 /* MessageLinks */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23EF010A9177F80209C1C5ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MessageLinks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84496492227A7542005D6AF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844964D8227A7899005D6AF9 /* MLAttachmentsWrapperViewController.m in Sources */,
+				844964E1227A7899005D6AF9 /* MLLinkImageView.m in Sources */,
+				844964DC227A7899005D6AF9 /* NSDate+MLExtensions.m in Sources */,
+				844964D5227A7899005D6AF9 /* MLLink.m in Sources */,
+				8449649B227A7542005D6AF9 /* MessageLinks.m in Sources */,
+				844964DA227A7899005D6AF9 /* MLChatDatabaseManager.m in Sources */,
+				844964DD227A7899005D6AF9 /* MLLinksViewController.m in Sources */,
+				844964DB227A7899005D6AF9 /* MLLinkAttachmentCellView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8449649C227A7542005D6AF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8449649D227A7542005D6AF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8449649F227A7542005D6AF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD777CDE48D164627189EB6E /* Pods-MessageLinks.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 77M726UR7J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MessageLinks/MessageLinks-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		844964A0227A7542005D6AF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12E96A86F9E46504ABF8B5E3 /* Pods-MessageLinks.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 77M726UR7J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MessageLinks/MessageLinks-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84496490227A7542005D6AF9 /* Build configuration list for PBXProject "MessageLinks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8449649C227A7542005D6AF9 /* Debug */,
+				8449649D227A7542005D6AF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8449649E227A7542005D6AF9 /* Build configuration list for PBXNativeTarget "MessageLinks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8449649F227A7542005D6AF9 /* Debug */,
+				844964A0227A7542005D6AF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8449648D227A7542005D6AF9 /* Project object */;
+}
