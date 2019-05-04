@@ -8,42 +8,18 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+#import "MLLaunchTracker.h"
 
+@interface AppDelegate ()
+@property (retain) MLLaunchTracker *tracker;
 @property (weak) IBOutlet NSWindow *window;
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    NSString *messagesPath = @"/Applications/Messages.app/Contents/MacOS/Messages";
-    if ([[NSFileManager defaultManager] fileExistsAtPath:messagesPath]) {
-        [self launchApplicationWithPath:messagesPath andBundleIdentifier:@"com.apple.messages"];
-    }
+    self.tracker = [[MLLaunchTracker alloc] init];
+    [self.tracker startTracking];
 }
-
--(void)launchApplicationWithPath:(NSString*)inPath andBundleIdentifier:(NSString*)inBundleIdentifier {
-    if (inPath != nil) {
-        // Run Messages.app and inject our dynamic library
-        NSString *dyldLibrary = [[NSBundle bundleForClass:[self class]] pathForResource:@"MessageLinks" ofType:@"dylib"];
-        NSString *launcherString = [NSString stringWithFormat:@"DYLD_INSERT_LIBRARIES=\"%@\" \"%@\" &", dyldLibrary, inPath];
-        system([launcherString UTF8String]);
-        
-        // Bring it to front after a delay
-        [self performSelector:@selector(bringToFrontApplicationWithBundleIdentifier:) withObject:inBundleIdentifier afterDelay:1.0];
-    }
-}
-
--(void)bringToFrontApplicationWithBundleIdentifier:(NSString*)inBundleIdentifier {
-    // Try to bring the application to front
-    NSArray* appsArray = [NSRunningApplication runningApplicationsWithBundleIdentifier:inBundleIdentifier];
-    if ([appsArray count] > 0) {
-        [[appsArray objectAtIndex:0] activateWithOptions:NSApplicationActivateIgnoringOtherApps];
-    }
-    
-    // Quit ourself
-    [[NSApplication sharedApplication] terminate:self];
-}
-
 
 @end
