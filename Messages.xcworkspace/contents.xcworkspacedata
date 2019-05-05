@@ -8,6 +8,9 @@
       location = "group:MessagesLauncher/MessagesLauncher.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:MessagesDatabase/MessagesDatabase.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

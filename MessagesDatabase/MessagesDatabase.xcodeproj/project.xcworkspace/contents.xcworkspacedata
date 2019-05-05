@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:MessagesLauncher.xcodeproj">
+      location = "self:MessagesDatabase.xcodeproj">
    </FileRef>
 </Workspace>
