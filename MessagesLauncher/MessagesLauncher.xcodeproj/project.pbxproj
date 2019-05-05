@@ -30,20 +30,6 @@
 			remoteGlobalIDString = 84496495227A7542005D6AF9;
 			remoteInfo = MessageLinks;
 		};
-		844964BA227A7795005D6AF9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 844964B5227A7795005D6AF9 /* MessageLinks.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 84496495227A7542005D6AF9;
-			remoteInfo = MessageLinks;
-		};
-		844964BC227A77A3005D6AF9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 844964AE227A7746005D6AF9 /* MessageLinks.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 84496494227A7542005D6AF9;
-			remoteInfo = MessageLinks;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -60,7 +46,6 @@
 		844964AA227A75D9005D6AF9 /* MessagesLauncher-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MessagesLauncher-Prefix.pch"; sourceTree = "<group>"; };
 		844964AC227A76AE005D6AF9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		844964AE227A7746005D6AF9 /* MessageLinks.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MessageLinks.xcodeproj; path = ../MessageLinks/MessageLinks.xcodeproj; sourceTree = "<group>"; };
-		844964B5227A7795005D6AF9 /* MessageLinks.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MessageLinks.xcodeproj; path = ../MessageLinks/MessageLinks.xcodeproj; sourceTree = "<group>"; };
 		845F8156227E5C3A00378BAF /* MLPreferencesManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLPreferencesManager.h; sourceTree = "<group>"; };
 		845F8157227E5C3A00378BAF /* MLPreferencesManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLPreferencesManager.m; sourceTree = "<group>"; };
 		84F30BCC227D8E0F00F4DBC4 /* MLLaunchTracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLLaunchTracker.h; sourceTree = "<group>"; };
@@ -94,7 +79,6 @@
 				8449647A227A7507005D6AF9 /* MessagesLauncher */,
 				84496479227A7507005D6AF9 /* Products */,
 				844964AB227A76AE005D6AF9 /* Frameworks */,
-				844964B5227A7795005D6AF9 /* MessageLinks.xcodeproj */,
 				C6C9D5B141B20CC5B0449437 /* Pods */,
 			);
 			sourceTree = "<group>";
@@ -158,14 +142,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		844964B6227A7795005D6AF9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				844964BB227A7795005D6AF9 /* MessageLinks.dylib */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		C6C9D5B141B20CC5B0449437 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,7 +166,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				844964BD227A77A3005D6AF9 /* PBXTargetDependency */,
 			);
 			name = MessagesLauncher;
 			productName = MessagesLauncher;
@@ -227,10 +202,6 @@
 					ProductGroup = 844964AF227A7746005D6AF9 /* Products */;
 					ProjectRef = 844964AE227A7746005D6AF9 /* MessageLinks.xcodeproj */;
 				},
-				{
-					ProductGroup = 844964B6227A7795005D6AF9 /* Products */;
-					ProjectRef = 844964B5227A7795005D6AF9 /* MessageLinks.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -245,13 +216,6 @@
 			fileType = "compiled.mach-o.dylib";
 			path = MessageLinks.dylib;
 			remoteRef = 844964B2227A7746005D6AF9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		844964BB227A7795005D6AF9 /* MessageLinks.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = MessageLinks.dylib;
-			remoteRef = 844964BA227A7795005D6AF9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -306,14 +270,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		844964BD227A77A3005D6AF9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MessageLinks;
-			targetProxy = 844964BC227A77A3005D6AF9 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		84496480227A7509005D6AF9 /* MainMenu.xib */ = {
