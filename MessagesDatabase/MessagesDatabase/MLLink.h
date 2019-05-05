@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <LinkPresentation/LPLinkMetadata.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

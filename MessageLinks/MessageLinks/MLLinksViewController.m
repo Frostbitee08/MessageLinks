@@ -15,10 +15,8 @@
 #include <IMCore/IMMessage.h>
 #include <IMCore/IMChat.h>
 
-#import "MLChatDatabaseManager.h"
 #import "MLLinksViewController.h"
 #import "MLLinkAttachmentCellView.h"
-#import "MLLink.h"
 
 @interface MLLinksViewController () <NSTableViewDataSource, NSTableViewDelegate>
 @property (nonatomic, retain) NSArray<MLLink *> *links;

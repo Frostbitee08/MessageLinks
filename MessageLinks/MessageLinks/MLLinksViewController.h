@@ -7,8 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
-#import "MLLink.h"
+#import <MessagesDatabase/MessagesDatabase.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
