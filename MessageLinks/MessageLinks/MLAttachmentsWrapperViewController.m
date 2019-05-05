@@ -12,7 +12,7 @@
 #import <Masonry/Masonry.h>
 
 //HACK: This whole class exists because I don't want to break anything. It should probably be removed
-@interface MLAttachmentsWrapperViewController () <NSCollectionViewDataSource>
+@interface MLAttachmentsWrapperViewController ()
 @property (nonatomic) NSViewController *rootViewController;
 @end
 

@@ -13,7 +13,11 @@
 		844964A9227A75B8005D6AF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844964A8227A75B8005D6AF9 /* Assets.xcassets */; };
 		844964AD227A76AE005D6AF9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844964AC227A76AE005D6AF9 /* Cocoa.framework */; };
 		844964E7227B6C1F005D6AF9 /* MessageLinks.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 844964B3227A7746005D6AF9 /* MessageLinks.dylib */; };
+		845F8158227E5C3A00378BAF /* MLPreferencesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 845F8157227E5C3A00378BAF /* MLPreferencesManager.m */; };
 		84F30BCE227D8E0F00F4DBC4 /* MLLaunchTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F30BCD227D8E0F00F4DBC4 /* MLLaunchTracker.m */; };
+		84F30BD1227E442000F4DBC4 /* MLMenuItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F30BD0227E442000F4DBC4 /* MLMenuItemManager.m */; };
+		84F30BD4227E46A300F4DBC4 /* MLPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F30BD3227E46A300F4DBC4 /* MLPreferencesWindowController.m */; };
+		84F30BDC227E487A00F4DBC4 /* MLPreferencesWindowContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F30BDB227E487A00F4DBC4 /* MLPreferencesWindowContentViewController.m */; };
 		F8F1C779D962FC5398B70EF8 /* libPods-MessagesLauncher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 787CA2BD5F75DA2B369627F2 /* libPods-MessagesLauncher.a */; };
 /* End PBXBuildFile section */
 
@@ -55,8 +59,16 @@
 		844964AC227A76AE005D6AF9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		844964AE227A7746005D6AF9 /* MessageLinks.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MessageLinks.xcodeproj; path = ../MessageLinks/MessageLinks.xcodeproj; sourceTree = "<group>"; };
 		844964B5227A7795005D6AF9 /* MessageLinks.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MessageLinks.xcodeproj; path = ../MessageLinks/MessageLinks.xcodeproj; sourceTree = "<group>"; };
+		845F8156227E5C3A00378BAF /* MLPreferencesManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLPreferencesManager.h; sourceTree = "<group>"; };
+		845F8157227E5C3A00378BAF /* MLPreferencesManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLPreferencesManager.m; sourceTree = "<group>"; };
 		84F30BCC227D8E0F00F4DBC4 /* MLLaunchTracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLLaunchTracker.h; sourceTree = "<group>"; };
 		84F30BCD227D8E0F00F4DBC4 /* MLLaunchTracker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLLaunchTracker.m; sourceTree = "<group>"; };
+		84F30BCF227E442000F4DBC4 /* MLMenuItemManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLMenuItemManager.h; sourceTree = "<group>"; };
+		84F30BD0227E442000F4DBC4 /* MLMenuItemManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLMenuItemManager.m; sourceTree = "<group>"; };
+		84F30BD2227E46A300F4DBC4 /* MLPreferencesWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLPreferencesWindowController.h; sourceTree = "<group>"; };
+		84F30BD3227E46A300F4DBC4 /* MLPreferencesWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLPreferencesWindowController.m; sourceTree = "<group>"; };
+		84F30BDA227E487A00F4DBC4 /* MLPreferencesWindowContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLPreferencesWindowContentViewController.h; sourceTree = "<group>"; };
+		84F30BDB227E487A00F4DBC4 /* MLPreferencesWindowContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLPreferencesWindowContentViewController.m; sourceTree = "<group>"; };
 		FF7E59D8DD4F5E38FEA646BC /* Pods-MessagesLauncher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagesLauncher.release.xcconfig"; path = "../Pods/Target Support Files/Pods-MessagesLauncher/Pods-MessagesLauncher.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +111,14 @@
 				8449647C227A7507005D6AF9 /* AppDelegate.m */,
 				84F30BCC227D8E0F00F4DBC4 /* MLLaunchTracker.h */,
 				84F30BCD227D8E0F00F4DBC4 /* MLLaunchTracker.m */,
+				84F30BCF227E442000F4DBC4 /* MLMenuItemManager.h */,
+				84F30BD0227E442000F4DBC4 /* MLMenuItemManager.m */,
+				845F8156227E5C3A00378BAF /* MLPreferencesManager.h */,
+				845F8157227E5C3A00378BAF /* MLPreferencesManager.m */,
+				84F30BD2227E46A300F4DBC4 /* MLPreferencesWindowController.h */,
+				84F30BD3227E46A300F4DBC4 /* MLPreferencesWindowController.m */,
+				84F30BDA227E487A00F4DBC4 /* MLPreferencesWindowContentViewController.h */,
+				84F30BDB227E487A00F4DBC4 /* MLPreferencesWindowContentViewController.m */,
 				844964A7227A7586005D6AF9 /* Supporting Files */,
 			);
 			path = MessagesLauncher;
@@ -271,8 +291,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845F8158227E5C3A00378BAF /* MLPreferencesManager.m in Sources */,
 				84496485227A7509005D6AF9 /* main.m in Sources */,
 				84F30BCE227D8E0F00F4DBC4 /* MLLaunchTracker.m in Sources */,
+				84F30BDC227E487A00F4DBC4 /* MLPreferencesWindowContentViewController.m in Sources */,
+				84F30BD1227E442000F4DBC4 /* MLMenuItemManager.m in Sources */,
+				84F30BD4227E46A300F4DBC4 /* MLPreferencesWindowController.m in Sources */,
 				8449647D227A7507005D6AF9 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,7 +452,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = particleapps.MessagesLauncher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -451,7 +475,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = particleapps.MessagesLauncher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

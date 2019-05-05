@@ -53,8 +53,8 @@
             }
             else if (self.injectedProcess != application.processIdentifier && !self.shouldCaptureProcessIdentifier) {
                 //Initiate Variables
-                NSString *dyldLibrary = @"/Users/Admin/Desktop/MessageLinks.dylib";
                 NSString *messagesPath = @"/Applications/Messages.app/Contents/MacOS/Messages";
+                NSString *dyldLibrary = [[NSBundle bundleForClass:[self class]] pathForResource:@"MessageLinks" ofType:@"dylib"];
                 NSString *launcherString = [NSString stringWithFormat:@"DYLD_INSERT_LIBRARIES=\"%@\" \"%@\" &", dyldLibrary, messagesPath];
                 
                 //Kill Current App

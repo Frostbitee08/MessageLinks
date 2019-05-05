@@ -9,9 +9,11 @@
 #import "AppDelegate.h"
 
 #import "MLLaunchTracker.h"
+#import "MLMenuItemManager.h"
 
 @interface AppDelegate ()
-@property (retain) MLLaunchTracker *tracker;
+@property (nonatomic, retain) MLLaunchTracker *tracker;
+@property (nonatomic, retain) MLMenuItemManager *manager;
 @property (weak) IBOutlet NSWindow *window;
 @end
 
@@ -19,6 +21,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     self.tracker = [[MLLaunchTracker alloc] init];
+    self.manager = [[MLMenuItemManager alloc] init];
+    
     [self.tracker startTracking];
 }
 
