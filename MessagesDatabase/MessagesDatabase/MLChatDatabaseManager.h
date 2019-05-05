@@ -18,7 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedInstance;
 
-- (NSArray<NSURL *> *)linksForChat:(IMChat *)chat error:(NSError **)error;
+- (NSArray<MLLink *> *)linksForChat:(IMChat *)chat error:(NSError **)error;
+
+- (NSArray<MLLink *> *)recentLinks:(NSInteger)numberOfRecentLinks error:(NSError **)error;
 
 @end
 

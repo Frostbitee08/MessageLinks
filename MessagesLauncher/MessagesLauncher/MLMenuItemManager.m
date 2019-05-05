@@ -7,11 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <MessagesDatabase/MessagesDatabase.h>
 
 #import "MLMenuItemManager.h"
+#import "MLPreferencesManager.h"
 #import "MLPreferencesWindowContentViewController.h"
 
-@interface MLMenuItemManager ()
+@interface MLMenuItemManager () <NSMenuDelegate>
 @property (nonatomic, retain) MLPreferencesWindowContentViewController *contentViewController;
 @property (nonatomic, retain) NSStatusItem *statusItem;
 @property (nonatomic, retain) NSWindow *window;
@@ -23,19 +25,16 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        NSMenuItem *preferencesItem = [[NSMenuItem alloc] initWithTitle:@"Preferences" action:@selector(showPreferences) keyEquivalent:@""];
-        NSMenuItem *quitItem = [[NSMenuItem alloc] initWithTitle:@"Quit MessageLinks" action:@selector(quitApplication) keyEquivalent:@""];
-        
+        //Instantiate Member Variables
         self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+        self.menu = [[NSMenu alloc] initWithTitle:@"menu"];
         
-        [preferencesItem setTarget:self];
-        [quitItem setTarget:self];
-        [self.statusItem setMenu:[[NSMenu alloc] initWithTitle:@"menu"]];
+        //Set Peroperties
+        [self.menu setDelegate:self];
+        [self.statusItem setMenu:self.menu];
         [self.statusItem setTitle:@"ML"];
         [self.statusItem setEnabled:YES];
         [self.statusItem setHighlightMode:YES];
-        [self.statusItem.menu addItem:preferencesItem];
-        [self.statusItem.menu addItem:quitItem];
     }
     return self;
 }
@@ -55,6 +54,44 @@
 
 - (void)quitApplication {
     [[NSApplication sharedApplication] terminate:self];
+}
+
+- (void)clickLink {
+    
+}
+
+#pragma mark - NSMenuDelegate
+
+- (void)menuWillOpen:(NSMenu *)menu {
+    //Remove Previous Items
+    [self.menu removeAllItems];
+    
+    //Instantiate Local Varibales
+    NSMenuItem *preferencesItem = [[NSMenuItem alloc] initWithTitle:@"Preferences" action:@selector(showPreferences) keyEquivalent:@""];
+    NSMenuItem *quitItem = [[NSMenuItem alloc] initWithTitle:@"Quit MessageLinks" action:@selector(quitApplication) keyEquivalent:@""];
+    NSError *error = nil;
+    
+    //Set Properties
+    [preferencesItem setTarget:self];
+    [quitItem setTarget:self];
+    
+    //Fetch Links
+    if ([[MLPreferencesManager sharedInstance] includeLinksInMenu]) {
+        for (MLLink *link in [[MLChatDatabaseManager sharedInstance] recentLinks:5 error:&error]) {
+            NSString *title = link.title;
+            if (!title || title.length == 0) {
+                title = link.url.absoluteString;
+            }
+            NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:title action:@selector(clickLink) keyEquivalent:@""];
+            [item setTarget:self];
+            [self.menu addItem:item];
+        }
+    }
+    
+    //Add Items
+    [self.menu addItem:[NSMenuItem separatorItem]];
+    [self.menu addItem:preferencesItem];
+    [self.menu addItem:quitItem];
 }
 
 @end
