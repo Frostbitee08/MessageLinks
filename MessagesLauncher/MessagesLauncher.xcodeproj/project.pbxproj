@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		843EA51D227F9BF20094BADF /* MessagesDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843EA51C227F9BF20094BADF /* MessagesDatabase.framework */; };
+		843EA524227FB0450094BADF /* MLLinkItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 843EA523227FB0450094BADF /* MLLinkItemView.m */; };
+		843EA527227FB1E70094BADF /* MLLinkItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 843EA526227FB1E70094BADF /* MLLinkItem.m */; };
+		843EA52C227FEE670094BADF /* MLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 843EA52B227FEE670094BADF /* MLImageView.m */; };
 		8449647D227A7507005D6AF9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449647C227A7507005D6AF9 /* AppDelegate.m */; };
 		84496482227A7509005D6AF9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84496480227A7509005D6AF9 /* MainMenu.xib */; };
 		84496485227A7509005D6AF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84496484227A7509005D6AF9 /* main.m */; };
@@ -23,6 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		843EA528227FB7310094BADF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 844964AE227A7746005D6AF9 /* MessageLinks.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 84496494227A7542005D6AF9;
+			remoteInfo = MessageLinks;
+		};
 		844964B2227A7746005D6AF9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 844964AE227A7746005D6AF9 /* MessageLinks.xcodeproj */;
@@ -36,6 +46,12 @@
 		4662D1D4134DFAC54C69797B /* Pods-MessagesLauncher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagesLauncher.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-MessagesLauncher/Pods-MessagesLauncher.debug.xcconfig"; sourceTree = "<group>"; };
 		787CA2BD5F75DA2B369627F2 /* libPods-MessagesLauncher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MessagesLauncher.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		843EA51C227F9BF20094BADF /* MessagesDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MessagesDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		843EA522227FB0450094BADF /* MLLinkItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLLinkItemView.h; sourceTree = "<group>"; };
+		843EA523227FB0450094BADF /* MLLinkItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLLinkItemView.m; sourceTree = "<group>"; };
+		843EA525227FB1E70094BADF /* MLLinkItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLLinkItem.h; sourceTree = "<group>"; };
+		843EA526227FB1E70094BADF /* MLLinkItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLLinkItem.m; sourceTree = "<group>"; };
+		843EA52A227FEE670094BADF /* MLImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLImageView.h; sourceTree = "<group>"; };
+		843EA52B227FEE670094BADF /* MLImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLImageView.m; sourceTree = "<group>"; };
 		84496478227A7507005D6AF9 /* MessagesLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagesLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8449647B227A7507005D6AF9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8449647C227A7507005D6AF9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -100,6 +116,10 @@
 				84F30BCD227D8E0F00F4DBC4 /* MLLaunchTracker.m */,
 				84F30BCF227E442000F4DBC4 /* MLMenuItemManager.h */,
 				84F30BD0227E442000F4DBC4 /* MLMenuItemManager.m */,
+				843EA525227FB1E70094BADF /* MLLinkItem.h */,
+				843EA526227FB1E70094BADF /* MLLinkItem.m */,
+				843EA522227FB0450094BADF /* MLLinkItemView.h */,
+				843EA523227FB0450094BADF /* MLLinkItemView.m */,
 				845F8156227E5C3A00378BAF /* MLPreferencesManager.h */,
 				845F8157227E5C3A00378BAF /* MLPreferencesManager.m */,
 				84F30BD2227E46A300F4DBC4 /* MLPreferencesWindowController.h */,
@@ -107,6 +127,8 @@
 				84F30BDA227E487A00F4DBC4 /* MLPreferencesWindowContentViewController.h */,
 				84F30BDB227E487A00F4DBC4 /* MLPreferencesWindowContentViewController.m */,
 				844964A7227A7586005D6AF9 /* Supporting Files */,
+				843EA52A227FEE670094BADF /* MLImageView.h */,
+				843EA52B227FEE670094BADF /* MLImageView.m */,
 			);
 			path = MessagesLauncher;
 			sourceTree = "<group>";
@@ -166,6 +188,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				843EA529227FB7310094BADF /* PBXTargetDependency */,
 			);
 			name = MessagesLauncher;
 			productName = MessagesLauncher;
@@ -259,10 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843EA527227FB1E70094BADF /* MLLinkItem.m in Sources */,
 				845F8158227E5C3A00378BAF /* MLPreferencesManager.m in Sources */,
 				84496485227A7509005D6AF9 /* main.m in Sources */,
 				84F30BCE227D8E0F00F4DBC4 /* MLLaunchTracker.m in Sources */,
 				84F30BDC227E487A00F4DBC4 /* MLPreferencesWindowContentViewController.m in Sources */,
+				843EA52C227FEE670094BADF /* MLImageView.m in Sources */,
+				843EA524227FB0450094BADF /* MLLinkItemView.m in Sources */,
 				84F30BD1227E442000F4DBC4 /* MLMenuItemManager.m in Sources */,
 				84F30BD4227E46A300F4DBC4 /* MLPreferencesWindowController.m in Sources */,
 				8449647D227A7507005D6AF9 /* AppDelegate.m in Sources */,
@@ -270,6 +296,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		843EA529227FB7310094BADF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MessageLinks;
+			targetProxy = 843EA528227FB7310094BADF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		84496480227A7509005D6AF9 /* MainMenu.xib */ = {

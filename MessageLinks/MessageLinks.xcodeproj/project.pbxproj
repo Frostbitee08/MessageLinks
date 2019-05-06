@@ -18,10 +18,8 @@
 		844964D8227A7899005D6AF9 /* MLAttachmentsWrapperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844964CA227A7899005D6AF9 /* MLAttachmentsWrapperViewController.m */; };
 		844964D9227A7899005D6AF9 /* MLLinkImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 844964CB227A7899005D6AF9 /* MLLinkImageView.h */; };
 		844964DB227A7899005D6AF9 /* MLLinkAttachmentCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844964CD227A7899005D6AF9 /* MLLinkAttachmentCellView.m */; };
-		844964DC227A7899005D6AF9 /* NSDate+MLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 844964CE227A7899005D6AF9 /* NSDate+MLExtensions.m */; };
 		844964DD227A7899005D6AF9 /* MLLinksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844964CF227A7899005D6AF9 /* MLLinksViewController.m */; };
 		844964DF227A7899005D6AF9 /* MLAttachmentsWrapperViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 844964D1227A7899005D6AF9 /* MLAttachmentsWrapperViewController.h */; };
-		844964E0227A7899005D6AF9 /* NSDate+MLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 844964D2227A7899005D6AF9 /* NSDate+MLExtensions.h */; };
 		844964E1227A7899005D6AF9 /* MLLinkImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844964D3227A7899005D6AF9 /* MLLinkImageView.m */; };
 		844964E2227A7899005D6AF9 /* MLLinkAttachmentCellView.h in Headers */ = {isa = PBXBuildFile; fileRef = 844964D4227A7899005D6AF9 /* MLLinkAttachmentCellView.h */; };
 		B2F64DA47A9D7F0645AADF88 /* libPods-MessageLinks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D245984C88E6638C43B557A /* libPods-MessageLinks.a */; };
@@ -42,10 +40,8 @@
 		844964CA227A7899005D6AF9 /* MLAttachmentsWrapperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLAttachmentsWrapperViewController.m; sourceTree = "<group>"; };
 		844964CB227A7899005D6AF9 /* MLLinkImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLinkImageView.h; sourceTree = "<group>"; };
 		844964CD227A7899005D6AF9 /* MLLinkAttachmentCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLinkAttachmentCellView.m; sourceTree = "<group>"; };
-		844964CE227A7899005D6AF9 /* NSDate+MLExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MLExtensions.m"; sourceTree = "<group>"; };
 		844964CF227A7899005D6AF9 /* MLLinksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLinksViewController.m; sourceTree = "<group>"; };
 		844964D1227A7899005D6AF9 /* MLAttachmentsWrapperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAttachmentsWrapperViewController.h; sourceTree = "<group>"; };
-		844964D2227A7899005D6AF9 /* NSDate+MLExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MLExtensions.h"; sourceTree = "<group>"; };
 		844964D3227A7899005D6AF9 /* MLLinkImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLinkImageView.m; sourceTree = "<group>"; };
 		844964D4227A7899005D6AF9 /* MLLinkAttachmentCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLinkAttachmentCellView.h; sourceTree = "<group>"; };
 		844964E6227B6A4C005D6AF9 /* MessageLinks-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MessageLinks-Prefix.pch"; sourceTree = "<group>"; };
@@ -91,18 +87,16 @@
 			isa = PBXGroup;
 			children = (
 				844964E6227B6A4C005D6AF9 /* MessageLinks-Prefix.pch */,
-				844964D2227A7899005D6AF9 /* NSDate+MLExtensions.h */,
-				844964CE227A7899005D6AF9 /* NSDate+MLExtensions.m */,
 				84496498227A7542005D6AF9 /* MessageLinks.h */,
 				8449649A227A7542005D6AF9 /* MessageLinks.m */,
 				844964D1227A7899005D6AF9 /* MLAttachmentsWrapperViewController.h */,
 				844964CA227A7899005D6AF9 /* MLAttachmentsWrapperViewController.m */,
+				844964C8227A7898005D6AF9 /* MLLinksViewController.h */,
+				844964CF227A7899005D6AF9 /* MLLinksViewController.m */,
 				844964D4227A7899005D6AF9 /* MLLinkAttachmentCellView.h */,
 				844964CD227A7899005D6AF9 /* MLLinkAttachmentCellView.m */,
 				844964CB227A7899005D6AF9 /* MLLinkImageView.h */,
 				844964D3227A7899005D6AF9 /* MLLinkImageView.m */,
-				844964C8227A7898005D6AF9 /* MLLinksViewController.h */,
-				844964CF227A7899005D6AF9 /* MLLinksViewController.m */,
 			);
 			path = MessageLinks;
 			sourceTree = "<group>";
@@ -137,7 +131,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				844964D9227A7899005D6AF9 /* MLLinkImageView.h in Headers */,
-				844964E0227A7899005D6AF9 /* NSDate+MLExtensions.h in Headers */,
 				844964E2227A7899005D6AF9 /* MLLinkAttachmentCellView.h in Headers */,
 				844964D6227A7899005D6AF9 /* MLLinksViewController.h in Headers */,
 				84496499227A7542005D6AF9 /* MessageLinks.h in Headers */,
@@ -225,7 +218,6 @@
 			files = (
 				844964D8227A7899005D6AF9 /* MLAttachmentsWrapperViewController.m in Sources */,
 				844964E1227A7899005D6AF9 /* MLLinkImageView.m in Sources */,
-				844964DC227A7899005D6AF9 /* NSDate+MLExtensions.m in Sources */,
 				8449649B227A7542005D6AF9 /* MessageLinks.m in Sources */,
 				844964DD227A7899005D6AF9 /* MLLinksViewController.m in Sources */,
 				844964DB227A7899005D6AF9 /* MLLinkAttachmentCellView.m in Sources */,

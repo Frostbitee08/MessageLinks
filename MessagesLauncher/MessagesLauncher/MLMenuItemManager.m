@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import <MessagesDatabase/MessagesDatabase.h>
 
+#import "MLLinkItem.h"
 #import "MLMenuItemManager.h"
 #import "MLPreferencesManager.h"
 #import "MLPreferencesWindowContentViewController.h"
@@ -30,11 +31,13 @@
         self.menu = [[NSMenu alloc] initWithTitle:@"menu"];
         
         //Set Peroperties
-        [self.menu setDelegate:self];
+        //[self.menu setDelegate:self];
         [self.statusItem setMenu:self.menu];
         [self.statusItem setTitle:@"ML"];
         [self.statusItem setEnabled:YES];
         [self.statusItem setHighlightMode:YES];
+        
+        [self menuWillOpen:self.menu];
     }
     return self;
 }
@@ -56,8 +59,8 @@
     [[NSApplication sharedApplication] terminate:self];
 }
 
-- (void)clickLink {
-    
+- (void)clickLink:(MLLinkItem *)item {
+    [[NSWorkspace sharedWorkspace] openURL:item.link.url];
 }
 
 #pragma mark - NSMenuDelegate
@@ -76,14 +79,12 @@
     [quitItem setTarget:self];
     
     //Fetch Links
-    if ([[MLPreferencesManager sharedInstance] includeLinksInMenu]) {
+    if ([[MLPreferencesManager sharedInstance] includeLinksInMenu] || true) {
         for (MLLink *link in [[MLChatDatabaseManager sharedInstance] recentLinks:5 error:&error]) {
-            NSString *title = link.title;
-            if (!title || title.length == 0) {
-                title = link.url.absoluteString;
-            }
-            NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:title action:@selector(clickLink) keyEquivalent:@""];
-            [item setTarget:self];
+            MLLinkItem *item = [[MLLinkItem alloc] initWithLink:link
+                                                         target:self
+                                                         action:@selector(clickLink:)
+                                                  keyEquivalent:@""];
             [self.menu addItem:item];
         }
     }

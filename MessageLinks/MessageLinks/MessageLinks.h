@@ -10,7 +10,7 @@
 
 @interface MessageLinks : NSObject
 
-- (void)patchedShowAbout;
+- (void)rdp_viewDidLoad;
 
 - (BOOL)rdp_tabView:(NSTabView *)tabView shouldSelectTabViewItem:(NSTabViewItem *)tabViewItem;
 

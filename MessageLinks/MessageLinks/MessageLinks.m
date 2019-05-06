@@ -49,7 +49,7 @@ typedef NS_ENUM(NSInteger, MLOverride) {
     Class originalClass = NSClassFromString(@"SOAttachmentsTabViewController");
     
     //View Did Load
-    [MessageLinks loadWith:originalClass replacing:@selector(viewDidLoad) replacement:@selector(patchedShowAbout) override:MLOverrideViewDidLoad];
+    [MessageLinks loadWith:originalClass replacing:@selector(viewDidLoad) replacement:@selector(rdp_viewDidLoad) override:MLOverrideViewDidLoad];
     
     //View Did Appear
     [MessageLinks loadWith:originalClass replacing:@selector(viewDidAppear) replacement:@selector(rdp_viewDidAppear) override:MLOverrideViewDidAppear];
@@ -80,12 +80,6 @@ typedef NS_ENUM(NSInteger, MLOverride) {
     
     //Represeted Objects
     //[MessageLinks loadWith:originalClass replacing:@selector(setRepresentedObject:) replacement:@selector(rdp_setRepresentedObject:) override:MLOverrideRepresentedObject];
-    
-    //    Method originalMeth = class_getInstanceMethod(originalClass, NSSelectorFromString(@"toolbarSelectableItemIdentifiers:"));
-    //    sShouldSelectImp = method_getImplementation(originalMeth);
-    //
-    //    Method replacementMeth = class_getInstanceMethod(NSClassFromString(@"MessageLinks"), NSSelectorFromString(@"toolbarSelectableItemIdentifiers:"));
-    //    method_exchangeImplementations(originalMeth, replacementMeth);
 }
 
 + (void)loadWith:(Class)originalClass replacing:(SEL)originalSelector replacement:(SEL)replacementSelector override:(MLOverride)override {
@@ -121,7 +115,7 @@ typedef NS_ENUM(NSInteger, MLOverride) {
     method_exchangeImplementations(originalMeth, replacementMeth);
 }
 
-- (void)patchedShowAbout {
+- (void)rdp_viewDidLoad {
     //Run Original Method
     sOriginalImp(self, @selector(viewDidLoad), self);
     

@@ -231,6 +231,9 @@ NSString *RealHomeDirectory() {
                 NSString *text = [resultSet stringForColumn:@"text"];
                 NSData *payload = [resultSet dataForColumn:@"payload_data"];
                 LPLinkMetadata *metadata = [self metadataWithPayload:payload];
+                NSInteger messageId = [resultSet intForColumnIndex:0];
+                NSInteger attachmentId = [self attachmentIdentifierForMessageIdentifier:messageId];
+                NSURL *attachmentFileURL = [self urlForAttachment:attachmentId];
                 
                 //Parse for URLs
                 NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink error:nil];
@@ -240,6 +243,7 @@ NSString *RealHomeDirectory() {
                 //Create links
                 for (id result in matchesSet.allObjects) {
                     MLLink *link = [[MLLink alloc] initWithURL:[result URL] date:date];
+                    link.imageFileUrl = attachmentFileURL;
                     if (metadata) {
                         link.hasAttachedMetadata = true;
                         link.title = metadata.title;
@@ -278,6 +282,9 @@ NSString *RealHomeDirectory() {
         NSString *text = [resultSet stringForColumn:@"text"];
         NSData *payload = [resultSet dataForColumn:@"payload_data"];
         LPLinkMetadata *metadata = [self metadataWithPayload:payload];
+        NSInteger messageId = [resultSet intForColumnIndex:0];
+        NSInteger attachmentId = [self attachmentIdentifierForMessageIdentifier:messageId];
+        NSURL *attachmentFileURL = [self urlForAttachment:attachmentId];
 
         //Parse for URLs
         NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink error:nil];
@@ -287,6 +294,7 @@ NSString *RealHomeDirectory() {
         //Create links
         for (id result in matchesSet.allObjects) {
             MLLink *link = [[MLLink alloc] initWithURL:[result URL] date:date];
+            link.imageFileUrl = attachmentFileURL;
             if (metadata) {
                 link.hasAttachedMetadata = true;
                 link.title = metadata.title;
