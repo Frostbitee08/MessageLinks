@@ -126,9 +126,9 @@
 				84F30BD3227E46A300F4DBC4 /* MLPreferencesWindowController.m */,
 				84F30BDA227E487A00F4DBC4 /* MLPreferencesWindowContentViewController.h */,
 				84F30BDB227E487A00F4DBC4 /* MLPreferencesWindowContentViewController.m */,
-				844964A7227A7586005D6AF9 /* Supporting Files */,
 				843EA52A227FEE670094BADF /* MLImageView.h */,
 				843EA52B227FEE670094BADF /* MLImageView.m */,
+				844964A7227A7586005D6AF9 /* Supporting Files */,
 			);
 			path = MessagesLauncher;
 			sourceTree = "<group>";
@@ -439,6 +439,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 77M726UR7J;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MessagesLauncher/Supporting Files/MessagesLauncher-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MessagesLauncher/Supporting Files/Info.plist";
@@ -462,6 +463,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 77M726UR7J;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MessagesLauncher/Supporting Files/MessagesLauncher-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MessagesLauncher/Supporting Files/Info.plist";

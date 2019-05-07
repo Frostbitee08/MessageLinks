@@ -30,10 +30,11 @@
         self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
         self.menu = [[NSMenu alloc] initWithTitle:@"menu"];
         
+        
         //Set Peroperties
         //[self.menu setDelegate:self];
+        [self.statusItem setImage:[NSImage imageNamed:@"MenuIcon"]];
         [self.statusItem setMenu:self.menu];
-        [self.statusItem setTitle:@"ML"];
         [self.statusItem setEnabled:YES];
         [self.statusItem setHighlightMode:YES];
         
