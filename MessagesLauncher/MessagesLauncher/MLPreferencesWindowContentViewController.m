@@ -28,6 +28,7 @@
         
         //Instantiate Member Variables
         self.view = [[NSView alloc] initWithFrame:NSMakeRect(0, 0, 600, 300)];
+        self.title = @"Preferences";
         
         //Set Variables
         [stackView setAlignment:NSLayoutAttributeLeft];
@@ -36,10 +37,12 @@
         [startAtLogin setTitle:@"Start at Login"];
         [startAtLogin setTarget:self];
         [startAtLogin setAction:@selector(startAtLoginAction:)];
+        [startAtLogin setState:[[MLPreferencesManager sharedInstance] startsAtLaunch] ? NSControlStateValueOn : NSControlStateValueOff];
         [includeMenuLinks setButtonType:NSButtonTypeSwitch];
         [includeMenuLinks setTitle:@"Include Links in Menu Bar"];
         [includeMenuLinks setTarget:self];
         [includeMenuLinks setAction:@selector(includeLinksAction:)];
+        [includeMenuLinks setState:[[MLPreferencesManager sharedInstance] includeLinksInMenu] ? NSControlStateValueOn : NSControlStateValueOff];
         
         //Add Subviews
         [stackView addArrangedSubview:startAtLogin];

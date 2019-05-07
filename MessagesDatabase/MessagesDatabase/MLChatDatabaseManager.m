@@ -273,8 +273,10 @@ NSString *RealHomeDirectory() {
     }
     
     //Perform our query
+    NSString *query = [@"SELECT * FROM `message` WHERE text LIKE '%http%' ORDER BY ROWID DESC LIMIT "
+                       stringByAppendingString:[NSString stringWithFormat:@"%li", numberOfRecentLinks]];
+    FMResultSet *resultSet = [self.database executeQuery:query];
     NSMutableArray *results = [NSMutableArray array];
-    FMResultSet *resultSet = [self.database executeQuery:@"SELECT * FROM `message` WHERE text LIKE '%http%'"];
     while ([resultSet next]) {
         //Fetch Variables
         NSString *dateString = [resultSet stringForColumn:@"date"];

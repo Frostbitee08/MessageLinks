@@ -32,13 +32,11 @@
         
         
         //Set Peroperties
-        //[self.menu setDelegate:self];
+        [self.menu setDelegate:self];
         [self.statusItem setImage:[NSImage imageNamed:@"MenuIcon"]];
         [self.statusItem setMenu:self.menu];
         [self.statusItem setEnabled:YES];
         [self.statusItem setHighlightMode:YES];
-        
-        [self menuWillOpen:self.menu];
     }
     return self;
 }
@@ -54,6 +52,7 @@
     [self.window makeKeyAndOrderFront:[NSApplication sharedApplication].delegate];
     NSWindowController *controller = [[NSWindowController alloc] initWithWindow:self.window];
     [controller showWindow:[NSApplication sharedApplication].delegate];
+    [NSApp activateIgnoringOtherApps:YES];
 }
 
 - (void)quitApplication {
@@ -80,7 +79,7 @@
     [quitItem setTarget:self];
     
     //Fetch Links
-    if ([[MLPreferencesManager sharedInstance] includeLinksInMenu] || true) {
+    if ([[MLPreferencesManager sharedInstance] includeLinksInMenu]) {
         for (MLLink *link in [[MLChatDatabaseManager sharedInstance] recentLinks:5 error:&error]) {
             MLLinkItem *item = [[MLLinkItem alloc] initWithLink:link
                                                          target:self
