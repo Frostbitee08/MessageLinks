@@ -40,17 +40,23 @@
         
         //Instantiate Local Variables
         NSStackView *stackView = [[NSStackView alloc] init];
+        NSButton *button = [[NSButton alloc] init];
         
         //Set Properties
         [stackView setAlignment:NSLayoutAttributeLeft];
         [stackView setOrientation:NSUserInterfaceLayoutOrientationVertical];
         [stackView addArrangedSubview:self.titleTextField];
         [stackView addArrangedSubview:self.subtitleTextField];
+        [button setTarget:self];
+        [button setAction:@selector(selectItem)];
+        [button setAlphaValue:0];
+        [button.layer setBackgroundColor:[NSColor clearColor].CGColor];
         
         //Add Subviews
         [self addSubview:self.dateTextField positioned:NSWindowAbove relativeTo:nil];
         [self addSubview:stackView positioned:NSWindowAbove relativeTo:self.dateTextField];
         [self addSubview:self.linkImageView positioned:NSWindowAbove relativeTo:stackView];
+        [self addSubview:button positioned:NSWindowAbove relativeTo:self.linkImageView];
         
         //Set Constraints
         [self.linkImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -68,6 +74,9 @@
             make.top.bottom.equalTo(self.linkImageView);
             make.right.equalTo(self).offset(-10);
             make.left.equalTo(self.linkImageView.mas_right).offset(5);
+        }];
+        [button mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self);
         }];
     }
     return self;
@@ -100,6 +109,10 @@
 }
 
 - (void)mouseUp:(NSEvent *)event {
+    [self selectItem];
+}
+
+- (void)selectItem {
     NSMenu *menu = self.enclosingMenuItem.menu;
     [menu cancelTracking];
     [menu performActionForItemAtIndex:[menu indexOfItem:self.enclosingMenuItem]];
