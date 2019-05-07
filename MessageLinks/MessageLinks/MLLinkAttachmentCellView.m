@@ -38,50 +38,46 @@
         stackView = [[NSStackView alloc] init];
 
         [stackView setAlignment:NSLayoutAttributeLeft];
+        [stackView setDistribution:NSStackViewDistributionGravityAreas];
         [stackView setOrientation:NSUserInterfaceLayoutOrientationVertical];
-        [stackView addArrangedSubview:self.titleTextField];
-        [stackView addArrangedSubview:self.subtitleTextField];
+        [stackView addView:self.titleTextField inGravity:NSStackViewGravityCenter];
+        [stackView addView:self.subtitleTextField inGravity:NSStackViewGravityCenter];
+        
+        [self.titleTextField setFont:[NSFont systemFontOfSize:14 weight:NSFontWeightMedium]];
+        [self.titleTextField setAlignment:NSTextAlignmentLeft];
+        [self.subtitleTextField setAlignment:NSTextAlignmentLeft];
+        [self.dateTextField setAlignment:NSTextAlignmentRight];
+        [self.linkImageView.layer setCornerRadius:5];
+        
+        for (NSTextField *field in @[self.titleTextField, self.dateTextField, self.subtitleTextField]) {
+            [field setBezeled:NO];
+            [field setEditable:NO];
+            [field setSelectable:NO];
+            [field setBackgroundColor:[NSColor clearColor]];
+        }
         
         [self addSubview:self.dateTextField positioned:NSWindowAbove relativeTo:nil];
         [self addSubview:stackView positioned:NSWindowAbove relativeTo:self.dateTextField];
         [self addSubview:self.linkImageView positioned:NSWindowAbove relativeTo:stackView];
+        
+        [self.linkImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(self).offset(10);
+            make.left.equalTo(self).offset(15);
+            make.height.width.equalTo(@(70));
+        }];
+        [self.dateTextField mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self).offset(-15);
+            make.top.equalTo(self).offset(5);
+            make.height.equalTo(@(15));
+            make.width.equalTo(@(150));
+        }];
+        [stackView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.linkImageView.mas_right).offset(10);
+            make.top.bottom.equalTo(self.linkImageView);
+            make.right.equalTo(self).offset(-15);
+        }];
     }
     return self;
-}
-
-- (void)layout {
-    [super layout];
-    
-    for (NSTextField *field in @[self.titleTextField, self.dateTextField, self.subtitleTextField]) {
-        [field setBezeled:NO];
-        [field setEditable:NO];
-        [field setSelectable:NO];
-        [field setBackgroundColor:[NSColor clearColor]];
-    }
-    
-    [self.titleTextField setAlignment:NSTextAlignmentLeft];
-    [self.subtitleTextField setAlignment:NSTextAlignmentLeft];
-    [self.dateTextField setAlignment:NSTextAlignmentRight];
-    [self.linkImageView.layer setCornerRadius:5];
-    
-    [self.linkImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self).offset(20);
-        make.bottom.equalTo(self).offset(-10);
-        make.left.equalTo(self).offset(15);
-        make.width.equalTo(@(80));
-    }];
-    [self.dateTextField mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self).offset(-15);
-        make.top.equalTo(self).offset(5);
-        make.height.equalTo(@(15));
-        make.width.equalTo(@(150));
-    }];
-    [stackView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.dateTextField.mas_bottom).offset(5);
-        make.bottom.equalTo(self).offset(-5);
-        make.right.equalTo(self).offset(-15);
-        make.left.equalTo(self.linkImageView.mas_right).offset(5);
-    }];
 }
 
 @end

@@ -54,17 +54,17 @@ typedef NS_ENUM(NSInteger, MLOverride) {
     //View Did Appear
     [MessageLinks loadWith:originalClass replacing:@selector(viewDidAppear) replacement:@selector(rdp_viewDidAppear) override:MLOverrideViewDidAppear];
     
-    //Did Select
-    /*[MessageLinks loadWith:originalClass
-     replacing:@selector(tabView:didSelectTabViewItem:)
-     replacement:@selector(rdp_tabView:didSelectTabViewItem:)
-     override:MLOverrideViewDidAppear];*/
-    
     //Should Select
     [MessageLinks loadWith:originalClass
                  replacing:@selector(tabView:shouldSelectTabViewItem:)
                replacement:@selector(rdp_tabView:shouldSelectTabViewItem:)
                   override:MLOverrideShouldSelect];
+    
+    //Did Select
+    /*[MessageLinks loadWith:originalClass
+     replacing:@selector(tabView:didSelectTabViewItem:)
+     replacement:@selector(rdp_tabView:didSelectTabViewItem:)
+     override:MLOverrideViewDidAppear];*/
     
     //Allowable Identifiers
     //    [MessageLinks loadWith:originalClass
@@ -176,7 +176,7 @@ typedef NS_ENUM(NSInteger, MLOverride) {
             return linksViewController.links.count > 0;
         }
     }
-    return sShouldSelectImp(self, @selector(tabView:didSelectTabViewItem:), self);
+    return (BOOL)sShouldSelectImp(self, @selector(tabView:didSelectTabViewItem:), self);
 }
 
 - (void)rdp_tabView:(NSTabView *)tabView didSelectTabViewItem:(NSTabViewItem *)tabViewItem {
@@ -188,22 +188,22 @@ typedef NS_ENUM(NSInteger, MLOverride) {
 - (void)rdp_parseAndSetAttachments:(id)arg1 {
     sParseAndSetImp(self, @selector(_parseAndSetAttachments:), self);
     
-    NSAlert *alert = [NSAlert alertWithMessageText:@"RDP Code has been injected!" defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:@"Parse Attachments:"];
-    [alert runModal];
+//    NSAlert *alert = [NSAlert alertWithMessageText:@"RDP Code has been injected!" defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:@"Parse Attachments:"];
+//    [alert runModal];
 }
 
 - (void)rdp_chatItemsChanged:(id)arg1 {
     sChatItemsChangedImp(self, @selector(_chatItemsChanged:), self);
     
-    NSAlert *alert = [NSAlert alertWithMessageText:@"RDP Code has been injected!" defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:@"rdp_chatItemsChanged:"];
-    [alert runModal];
+//    NSAlert *alert = [NSAlert alertWithMessageText:@"RDP Code has been injected!" defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:@"rdp_chatItemsChanged:"];
+//    [alert runModal];
 }
 
 - (void)rdp_setRepresentedObject:(id)arg1 {
     sRepresentedObjectImp(self, @selector(setRepresentedObject:), self);
     
-    NSAlert *alert = [NSAlert alertWithMessageText:@"RDP Code has been injected!" defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:@"rdp_setRepresentedObject:"];
-    [alert runModal];
+//    NSAlert *alert = [NSAlert alertWithMessageText:@"RDP Code has been injected!" defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:@"rdp_setRepresentedObject:"];
+//    [alert runModal];
 }
 
 

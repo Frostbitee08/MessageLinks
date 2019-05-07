@@ -44,9 +44,10 @@
         
         //Set Properties
         [stackView setAlignment:NSLayoutAttributeLeft];
+        [stackView setDistribution:NSStackViewDistributionGravityAreas];
         [stackView setOrientation:NSUserInterfaceLayoutOrientationVertical];
-        [stackView addArrangedSubview:self.titleTextField];
-        [stackView addArrangedSubview:self.subtitleTextField];
+        [stackView addView:self.titleTextField inGravity:NSStackViewGravityCenter];
+        [stackView addView:self.subtitleTextField inGravity:NSStackViewGravityCenter];
         [button setTarget:self];
         [button setAction:@selector(selectItem)];
         [button setAlphaValue:0];
@@ -71,9 +72,9 @@
             make.width.equalTo(@(150));
         }];
         [stackView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.linkImageView.mas_right).offset(10);
             make.top.bottom.equalTo(self.linkImageView);
             make.right.equalTo(self).offset(-10);
-            make.left.equalTo(self.linkImageView.mas_right).offset(5);
         }];
         [button mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self);
@@ -93,6 +94,7 @@
         [field setDrawsBackground:false];
     }
     
+    [self.titleTextField setFont:[NSFont systemFontOfSize:12 weight:NSFontWeightSemibold]];
     [self.titleTextField setAlignment:NSTextAlignmentLeft];
     [self.subtitleTextField setAlignment:NSTextAlignmentLeft];
     [self.dateTextField setAlignment:NSTextAlignmentRight];
