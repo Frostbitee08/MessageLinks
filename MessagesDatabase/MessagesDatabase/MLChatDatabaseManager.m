@@ -10,7 +10,7 @@
 
 #import "MLChatDatabaseManager.h"
 
-#import <FMDB/FMDB.h>
+#import <fmdb/FMDB.h>
 
 #include <LinkPresentation/LPLinkMetadata.h>
 #include <LinkPresentation/LPImage.h>

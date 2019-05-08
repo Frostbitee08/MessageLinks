@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		843EA51A227F9ACB0094BADF /* MessagesDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843EA519227F9ACB0094BADF /* MessagesDatabase.framework */; };
 		84496499227A7542005D6AF9 /* MessageLinks.h in Headers */ = {isa = PBXBuildFile; fileRef = 84496498227A7542005D6AF9 /* MessageLinks.h */; };
 		8449649B227A7542005D6AF9 /* MessageLinks.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449649A227A7542005D6AF9 /* MessageLinks.m */; };
 		844964C0227A77E9005D6AF9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844964BF227A77E9005D6AF9 /* Cocoa.framework */; };
@@ -22,13 +21,12 @@
 		844964DF227A7899005D6AF9 /* MLAttachmentsWrapperViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 844964D1227A7899005D6AF9 /* MLAttachmentsWrapperViewController.h */; };
 		844964E1227A7899005D6AF9 /* MLLinkImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844964D3227A7899005D6AF9 /* MLLinkImageView.m */; };
 		844964E2227A7899005D6AF9 /* MLLinkAttachmentCellView.h in Headers */ = {isa = PBXBuildFile; fileRef = 844964D4227A7899005D6AF9 /* MLLinkAttachmentCellView.h */; };
-		B2F64DA47A9D7F0645AADF88 /* libPods-MessageLinks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D245984C88E6638C43B557A /* libPods-MessageLinks.a */; };
+		8493F6E2CF9010857521745D /* libPods-MessageLinks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE6FA2226A9FB0C8CB76A29 /* libPods-MessageLinks.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DE6FA2226A9FB0C8CB76A29 /* libPods-MessageLinks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MessageLinks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12E96A86F9E46504ABF8B5E3 /* Pods-MessageLinks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageLinks.release.xcconfig"; path = "../Pods/Target Support Files/Pods-MessageLinks/Pods-MessageLinks.release.xcconfig"; sourceTree = "<group>"; };
-		3D245984C88E6638C43B557A /* libPods-MessageLinks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MessageLinks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		843EA519227F9ACB0094BADF /* MessagesDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MessagesDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84496495227A7542005D6AF9 /* MessageLinks.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = MessageLinks.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		84496498227A7542005D6AF9 /* MessageLinks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageLinks.h; sourceTree = "<group>"; };
 		8449649A227A7542005D6AF9 /* MessageLinks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageLinks.m; sourceTree = "<group>"; };
@@ -57,8 +55,7 @@
 				844964C4227A7808005D6AF9 /* LinkPresentation.framework in Frameworks */,
 				844964C5227A7808005D6AF9 /* IMCore.framework in Frameworks */,
 				844964C6227A7808005D6AF9 /* SocialUI.framework in Frameworks */,
-				843EA51A227F9ACB0094BADF /* MessagesDatabase.framework in Frameworks */,
-				B2F64DA47A9D7F0645AADF88 /* libPods-MessageLinks.a in Frameworks */,
+				8493F6E2CF9010857521745D /* libPods-MessageLinks.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,12 +101,11 @@
 		844964BE227A77E9005D6AF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				843EA519227F9ACB0094BADF /* MessagesDatabase.framework */,
 				844964C2227A7807005D6AF9 /* IMCore.framework */,
 				844964C1227A7807005D6AF9 /* LinkPresentation.framework */,
 				844964C3227A7808005D6AF9 /* SocialUI.framework */,
 				844964BF227A77E9005D6AF9 /* Cocoa.framework */,
-				3D245984C88E6638C43B557A /* libPods-MessageLinks.a */,
+				0DE6FA2226A9FB0C8CB76A29 /* libPods-MessageLinks.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
