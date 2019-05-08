@@ -7,9 +7,7 @@ project 'MessagesDatabase/MessagesDatabase.xcodeproj'
 
 target 'MessageLinks' do
     project 'MessageLinks/MessageLinks.xcodeproj'
-    pod 'HTMLKit'
     pod 'Masonry'
-    pod 'FMDB'
 end
 
 target 'MessagesLauncher' do
